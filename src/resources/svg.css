@@ -1,0 +1,43 @@
+@font-face {
+	font-family: Helvetica-Bold;
+	src: url("/resources/fonts/Helvetica-Bold.ttf");
+}
+
+svg {
+	--background: #f58b57;
+	--text: black;
+
+	background: var(--background)
+}
+
+text {
+	fill: var(--text);
+}
+
+#primary-text,
+#secondary-text,
+#tertiary-text,
+#quaternary-text {
+	font-family: Helvetica-Bold, sans-serif;
+	text-transform: uppercase;
+}
+
+#primary-text,
+#secondary-text {
+	font-size: 128px;
+}
+
+#secondary-text {
+	letter-spacing: 2px;
+}
+
+#tertiary-text,
+#quaternary-text {
+	font-size: 51.5px;
+	letter-spacing: 0.5px;
+}
+
+.align-right {
+	translate: 782px 0;
+	text-anchor: end;
+}

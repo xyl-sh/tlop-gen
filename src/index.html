@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+	<head>
+		<title>The Life of Pablo Album Art Generator</title>
+		<link href="resources/main.css" rel="stylesheet" type="text/css" />
+		<script src="resources/main.js"></script>
+		<link
+			rel="preload"
+			href="resources/fonts/HelveticaNowText-Bold.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="title" content="The Life of Pablo Album Art Generator" />
+		<meta name="description" content="Generate your own TLoP-style art." />
+		<meta name="theme-color" content="#f58b57" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://tlop.xyl.sh/" />
+		<meta property="og:title" content="The Life of Pablo Album Art Generator" />
+		<meta
+			property="og:description"
+			content="Generate your own TLoP-style art."
+		/>
+		<meta
+			property="og:image"
+			content="https://tlop.xyl.sh/resources/meta/example.png"
+		/>
+
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://tlop.xyl.sh/" />
+		<meta
+			property="twitter:title"
+			content="The Life of Pablo Album Art Generator"
+		/>
+		<meta
+			property="twitter:description"
+			content="Generate your own TLoP-style art."
+		/>
+		<meta
+			property="twitter:image"
+			content="https://tlop.xyl.sh/resources/meta/example.png"
+		/>
+	</head>
+	<body>
+		<h1>TLOP ART GENERATOR</h1>
+		<svg viewBox="0 0 2000 2000" id="svg">
+			<text x="292" y="188" id="primary-text"></text>
+			<use y="153" xlink:href="#primary-text"></use>
+			<use y="306" xlink:href="#primary-text"></use>
+			<use y="459" xlink:href="#primary-text"></use>
+			<use y="612" xlink:href="#primary-text"></use>
+			<use y="765" xlink:href="#primary-text"></use>
+			<use y="1075" xlink:href="#primary-text"></use>
+
+			<text x="1359" y="188" id="secondary-text"></text>
+			<use x="-141" y="153" xlink:href="#secondary-text"></use>
+			<use x="-141" y="306" xlink:href="#secondary-text"></use>
+			<use x="-141" y="459" xlink:href="#secondary-text"></use>
+			<use x="-141" y="612" xlink:href="#secondary-text"></use>
+			<use x="-141" y="765" xlink:href="#secondary-text"></use>
+			<use x="-71" y="1075" xlink:href="#secondary-text"></use>
+
+			<text x="245.5" y="1328" id="tertiary-text"></text>
+			<use y="63" xlink:href="#tertiary-text"></use>
+			<use y="126" xlink:href="#tertiary-text"></use>
+			<use y="189" xlink:href="#tertiary-text"></use>
+			<use y="252" xlink:href="#tertiary-text"></use>
+			<use y="315" xlink:href="#tertiary-text"></use>
+			<use y="378" xlink:href="#tertiary-text"></use>
+			<use y="441" xlink:href="#tertiary-text"></use>
+			<use y="504" xlink:href="#tertiary-text"></use>
+			<use y="567" xlink:href="#tertiary-text"></use>
+
+			<text x="1338" y="1328" id="quaternary-text"></text>
+			<use y="63" xlink:href="#quaternary-text"></use>
+			<use y="126" xlink:href="#quaternary-text"></use>
+			<use y="189" xlink:href="#quaternary-text"></use>
+			<use y="252" xlink:href="#quaternary-text"></use>
+			<use y="315" xlink:href="#quaternary-text"></use>
+			<use y="378" xlink:href="#quaternary-text"></use>
+			<use y="441" xlink:href="#quaternary-text"></use>
+			<use y="504" xlink:href="#quaternary-text"></use>
+			<use y="567" xlink:href="#quaternary-text"></use>
+
+			<image y="602" height="554" data-image="0" data-middle="808.5"></image>
+			<image y="1392" height="469" data-image="1" data-middle="1157.5"></image>
+		</svg>
+		<div class="inputs">
+			<button id="save-button">Download Image</button>
+			<div class="input-with-extra">
+				<input value="THE LIFE OF" data-text="primary" autocomplete="off" />
+				<div class="choice">
+					<button class="square-button selected" data-align="left"></button>
+					<button class="square-button" data-align="right"></button>
+				</div>
+			</div>
+			<input value="PABLO" data-text="secondary" autocomplete="off" />
+			<input value="WHICH / ONE" data-text="tertiary" autocomplete="off" />
+			<div class="input-with-extra">
+				<input
+					value="WHICH / ONE"
+					data-text="quaternary"
+					autocomplete="off"
+					disabled
+				/>
+				<input type="checkbox" id="toggle-quaternary" />
+			</div>
+			<div class="input-group">
+				<label for="image-0" data-image="0" data-text="TOP IMAGE"></label>
+				<input id="image-0" type="file" accept="image/*" data-image="0" />
+				<small>Recommended resolution: 795 x 554</small>
+			</div>
+			<div class="input-group">
+				<label for="image-1" data-image="1" data-text="BOTTOM IMAGE"></label>
+				<input id="image-1" type="file" accept="image/*" data-image="1" />
+				<small>Recommended resolution: 547 x 469</small>
+			</div>
+			<div class="input-group">
+				<div class="color-picker">
+					<input
+						value="#F58B57"
+						autocomplete="off"
+						data-color-type="background"
+					/>
+					<label class="square-button" for="background-color-picker"></label>
+					<input
+						type="color"
+						value="#F58B57"
+						id="background-color-picker"
+						data-color-type="background"
+					/>
+				</div>
+				<small>Background colour</small>
+			</div>
+			<div class="input-group">
+				<div class="color-picker">
+					<input value="#000000" autocomplete="off" data-color-type="text" />
+					<label class="square-button" for="text-color-picker"></label>
+					<input
+						type="color"
+						value="#000000"
+						id="text-color-picker"
+						data-color-type="text"
+					/>
+				</div>
+				<small>Text colour</small>
+			</div>
+		</div>
+	</body>
+</html>
