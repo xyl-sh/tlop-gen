@@ -33,7 +33,7 @@ svg {
 }
 
 svg.use-height {
-	height: var(--svg-height);
+	height: 2000px;
 }
 
 button,
