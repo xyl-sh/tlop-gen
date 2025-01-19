@@ -16,6 +16,14 @@ body {
   background-color: #f58b57;
 }
 
+footer {
+	font-size: .75rem;
+}
+
+a {
+	color: unset;
+}
+
 h1 {
 	margin: 0;
 	font-size: min(12vw, 3.5rem);
